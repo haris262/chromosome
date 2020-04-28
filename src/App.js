@@ -4,13 +4,21 @@ import './App.css';
 
 import Ideogram from 'ideogram';
 import Header from "./components/Header/Header";
+import HumanIdeogram from "./components/HumanIdeogram/HumanIdeogram";
 
 class App extends Component {
+  anno = [{
+    name: 'BRCA1',
+    chr: '17',
+    start: 43044294,
+    stop: 43125482
+  }];
+
   render() {
     return (
       <div className="App">
         <Header/>
-        <AppIdeogram/>
+        <HumanIdeogram annotations={this.anno}/>
       </div>
     );
   }
