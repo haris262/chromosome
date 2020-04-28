@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-
+import file from "../../data/annotations/100_virtual_snvs"
 import Ideogram from 'ideogram';
 
 export default class HumanIdeogram extends Component {
 
     createIdeogram() {
         const config = Object.assign({
+
             organism: 'human',
+            annotations: file,
             dataDir: 'https://unpkg.com/ideogram@1.16.0/dist/data/bands/native/',
             container: '#ideo-container'
         }, this.props);

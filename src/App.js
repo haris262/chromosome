@@ -6,19 +6,16 @@ import Ideogram from 'ideogram';
 import Header from "./components/Header/Header";
 import HumanIdeogram from "./components/HumanIdeogram/HumanIdeogram";
 
+
+import file from "./data/annotations/100_virtual_snvs";
+
 class App extends Component {
-  anno = [{
-    name: 'BRCA1',
-    chr: '17',
-    start: 43044294,
-    stop: 43125482
-  }];
 
   render() {
     return (
       <div className="App">
         <Header/>
-        <HumanIdeogram annotations={this.anno}/>
+        <HumanIdeogram annotations={file} />
       </div>
     );
   }
