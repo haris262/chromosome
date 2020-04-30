@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import file from "../../data/annotations/100_virtual_snvs"
 import Ideogram from 'ideogram';
+import style from "./HumanIdeogram.module.css"
 
 export default class HumanIdeogram extends Component {
 
@@ -26,7 +27,7 @@ export default class HumanIdeogram extends Component {
 
     render() {
         return (
-            <div id="ideo-container"></div>
+            <div id="ideo-container" className={style.ideogram}></div>
         );
     }
 }

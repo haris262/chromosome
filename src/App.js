@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import  './App.css';
 
 import Ideogram from 'ideogram';
 import Header from "./components/Header/Header";
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <HumanIdeogram annotations={file} />
+        <HumanIdeogram annotations={file}  />
       </div>
     );
   }

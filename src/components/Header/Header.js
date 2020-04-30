@@ -15,21 +15,19 @@ const Header = () => {
 
     return(
       <div className={styles.header}>
+          <div className={styles.item}>
+              <a className={styles.itemAnchor}>
+                  List View
+              </a>
+          </div>
+            <div className={styles.divider}/>
+
           <div className={styles.item} onClick={handleShow}>
               <a className={styles.itemAnchor}>
                   Add
               </a>
           </div>
-          <div className={styles.item}>
-              <a className={styles.itemAnchor}>
-                  Menu
-              </a>
-          </div>
-          <div className={styles.item}>
-              <a className={styles.itemAnchor}>
-                  Menu
-              </a>
-          </div>
+
 
           <AddModal show={show} handleClose={() => handleClose()}/>
 
