@@ -7,7 +7,7 @@ import Header from "./components/Header/Header";
 import HumanIdeogram from "./components/HumanIdeogram/HumanIdeogram";
 
 
-import file from "./data/annotations/100_virtual_snvs";
+import file from "./data/annotations/10_virtual_cnvs";
 
 class App extends Component {
 
@@ -21,26 +21,5 @@ class App extends Component {
   }
 }
 
-class AppIdeogram extends Component {
-
-  componentDidMount() {
-    return new Ideogram({
-      organism: 'human',
-      annotations: [{
-        name: 'BRCA1',
-        chr: '17',
-        start: 43044294,
-        stop: 43125482
-      }],
-      container: '#ideo-container'
-    });
-  }
-
-  render() {
-    return (
-      <div id="ideo-container"></div>
-    );
-  }
-}
 
 export default App;

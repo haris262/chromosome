@@ -2,111 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a12cedd0-2f4f-4b2b-80e5-65cab8e58c67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/9_tracks_virtual_snvs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/10000_virtual_snvs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/1000_virtual_snvs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/100_virtual_snvs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/10_virtual_cnvs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/9_tracks_virtual_snvs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/Homo_sapiens,_Ensembl_80.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/SRR562646.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/all_human_genes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/homo_sapiens-mus_musculus-synteny-v73.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/mouse_aging.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/annotations/oligodendroglioma_cnv_expression.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/anopheles-gambiae.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/arabidopsis-thaliana.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/aspergillus-fumigatus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/aspergillus-nidulans.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/aspergillus-niger.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/aspergillus-oryzae.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/brachypodium-distachyon-GCF_000005505.3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/brachypodium-distachyon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/canis-lupus-familiaris.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/chlorocebus-sabaeus-GCF_000409795.2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/chlorocebus-sabaeus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ciona-intestinalis-GCF_000224145.3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ciona-intestinalis.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/drosophila-melanogaster.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/felis-catus-GCF_000181335.3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/felis-catus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/gallus-gallus-GCF_000002315.6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/gallus-gallus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/gorilla-gorilla-GCF_000151905.2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/gorilla-gorilla.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-550.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.12-1200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.12-400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.12-550.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.12-850.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.12.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.13-550.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.13-850.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.13.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.26-400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.26-550.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.26.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000001405.38.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-GCF_000306695.2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens-no-bands.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/homo-sapiens.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/hordeum-vulgare.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ideogram_10090_GCF_000000045.1_NA_V2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ideogram_10090_GCF_000000045.2_NA_V2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ideogram_10090_GCF_000000055.13_NA_V2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ideogram_10090_GCF_000000055.14_NA_V2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ideogram_10090_GCF_000000055.15_NA_V2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ideogram_10090_GCF_000000055.16_NA_V2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ideogram_10090_GCF_000000055.18_NA_V2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/macaca-fascicularis-GCF_000364345.1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/macaca-fascicularis.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/macaca-mulatta-GCF_003339765.1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/macaca-mulatta.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/mus-musculus-GCF_000001635.20.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/mus-musculus-GCF_000001635.26.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/mus-musculus-no-bands.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/mus-musculus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/musa-acuminata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/nomascus-leucogenys-GCF_000146795.2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/nomascus-leucogenys.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ornithorhynchus-anatinus-GCF_000002275.2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/ornithorhynchus-anatinus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/oryza-sativa.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/pan-paniscus-GCF_000258655.2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/pan-paniscus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/pan-troglodytes-GCF_002880755.1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/pan-troglodytes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/rattus-norvegicus-GCF_000001895.5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/rattus-norvegicus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/zea-mays-b73-v2-centromeres.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/native/zea-mays.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/arabidopsis-thaliana.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/banana.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10090_GCF_000000045.1_NA_V2.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10090_GCF_000000045.2_NA_V2.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10090_GCF_000000055.13_NA_V2.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10090_GCF_000000055.14_NA_V2.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10090_GCF_000000055.15_NA_V2.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10090_GCF_000000055.16_NA_V2.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10090_GCF_000000055.18_NA_V2.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10090_GCF_000000055.19_NA_V2.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_10116_GCF_000000225.4_NA_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.12_1200_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.12_400_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.12_550_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.12_850_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.13_550_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.13_850_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.14_400_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.14_550_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ncbi/ideogram_9606_GCF_000001305.14_850_V1.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ucsc/chr1_bands.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/bands/ucsc/drosophila_melanogaster_dm6.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CURD Modals/AddModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CURD Modals/style.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HumanIdeogram/HumanIdeogram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HumanIdeogram/HumanIdeogram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -126,7 +30,7 @@
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -150,15 +54,15 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Haris\WebstormProjects\chromosome" />
-      <recent name="C:\Users\Haris\WebstormProjects\chromosome\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Haris\WebstormProjects\chromosome\src\Util" />
       <recent name="C:\Users\Haris\WebstormProjects\chromosome\src" />
       <recent name="C:\Users\Haris\WebstormProjects\chromosome" />
       <recent name="C:\Users\Haris\WebstormProjects\chromosome\ideogram\ideogram\examples\react\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Haris\WebstormProjects\chromosome" />
+      <recent name="C:\Users\Haris\WebstormProjects\chromosome\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -200,6 +104,7 @@
       <updated>1587118312680</updated>
       <workItem from="1587118314950" duration="1437000" />
       <workItem from="1587121186005" duration="4200000" />
+      <workItem from="1588161463111" duration="1200000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1587122827389</created>
@@ -238,6 +143,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="stupid" />
     <MESSAGE value="added ideogram component" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ideogram component" />
+    <MESSAGE value="modal partial" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal partial" />
   </component>
 </project>

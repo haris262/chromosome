@@ -1,0 +1,32 @@
+
+
+.row{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+}
+
+.input{
+    width: 50%;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.label{
+    width: 150px;
+}
+
+.select{
+    width: 50%;
+}
+
+.select:focus{
+    outline: none !important;
+
+}
+
+.header{
+    background-color: orange !important;
+}
