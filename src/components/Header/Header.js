@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import "./Header.css";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+import styles from "./Header.module.css";
+import AddModal from "../CURD Modals/AddModal";
 
 
 
@@ -15,40 +14,26 @@ const Header = () => {
 
 
     return(
-        <>
-      <div className="container">
-          <div className="item" onClick={handleShow}>
-              <a className="item-anchor">
+      <div className={styles.header}>
+          <div className={styles.item} onClick={handleShow}>
+              <a className={styles.itemAnchor}>
                   Add
               </a>
           </div>
-          <div className="item">
-              <a className="item-anchor">
+          <div className={styles.item}>
+              <a className={styles.itemAnchor}>
                   Menu
               </a>
           </div>
-          <div className="item">
-              <a className="item-anchor">
+          <div className={styles.item}>
+              <a className={styles.itemAnchor}>
                   Menu
               </a>
           </div>
-          <Modal show={show} onHide={handleClose} animation={false}>
-              <Modal.Header closeButton>
-                  <Modal.Title>Modal heading</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-              <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                      Close
-                  </Button>
-                  <Button variant="primary" onClick={handleClose}>
-                      Save Changes
-                  </Button>
-              </Modal.Footer>
-          </Modal>
+
+          <AddModal show={show} handleClose={() => handleClose()}/>
 
       </div>
-            </>
     );
 }
 
