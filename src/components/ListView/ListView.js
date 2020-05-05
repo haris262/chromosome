@@ -4,6 +4,7 @@ import Table from "react-bootstrap/Table";
 import Dropdown from "react-bootstrap/Dropdown";
 import AddModal from "../CURD Modals/AddModal";
 import DeleteModal from "../CURD Modals/DeleteModal";
+import EditModal from "../CURD Modals/EditModal";
 
 
 
@@ -26,7 +27,7 @@ const ListHeader = (headers) =>{
     )
 }
 
-const ListBody = ({data, handleShow}) =>{
+const ListBody = ({data, handleShowDelete, handleShowEdit}) =>{
     return (
         <tbody>
         {data.map((chr) =>{
@@ -51,8 +52,8 @@ const ListBody = ({data, handleShow}) =>{
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2" onClick={() => handleShow()}>Delete</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1" onClick={() => handleShowEdit()}>Edit</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2" onClick={() => handleShowDelete()}>Delete</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </td>
@@ -74,10 +75,16 @@ const ListBody = ({data, handleShow}) =>{
 
 const ListView = (props) => {
 
-    const [show, setShow] = useState(false);
+    const [showDelete, setShowDelete] = useState(false);
+    const handleCloseDelete = (dialog) => setShowDelete(false);
+    const handleShowDelete = (dialog) => setShowDelete(true);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const [showEdit, setShowEdit] = useState(false);
+    const handleCloseEdit = (dialog) => setShowEdit(false);
+    const handleShowEdit = (dialog) => setShowEdit(true);
+
+
+
     const {data} = props;
 
     return (
@@ -89,10 +96,11 @@ const ListView = (props) => {
             >
                 <ListHeader headers={getSafeDeep(data, "keys")}/>
 
-                <ListBody data={data.annots} handleShow={() => handleShow()}/>
+                <ListBody data={data.annots} handleShowDelete={() => handleShowDelete()} handleShowEdit={() => handleShowEdit()}/>
 
             </Table>
-            <DeleteModal show={show} handleClose={() => handleClose()}/>
+            <DeleteModal show={showDelete} handleClose={() => handleCloseDelete()}/>
+            <EditModal show={showEdit} handleClose={() => handleCloseEdit()}/>
         </div>
 
     )
