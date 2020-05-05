@@ -30,10 +30,13 @@
 
 .item:hover{
     color: white;
-    background-color: rgba(255,255,255,0.1);}
+    background-color: rgba(255,255,255,0.1);
+    cursor: pointer;
+}
 
 .item-anchor{
     text-decoration: none;
+    color: white;
 }
 
 .item-anchor:hover{

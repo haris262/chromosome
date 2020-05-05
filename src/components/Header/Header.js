@@ -1,12 +1,18 @@
 import React, {useState} from "react";
 import styles from "./Header.module.css";
 import AddModal from "../CURD Modals/AddModal";
-
-
+import {Link, BrowserRouter} from "react-router-dom";
+import {Router} from "react-router-dom";
+import {createBrowserHistory} from "history";
 
 
 
 const Header = () => {
+
+    const browserHistory = createBrowserHistory();
+
+    console.log(browserHistory)
+
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -16,9 +22,12 @@ const Header = () => {
     return(
       <div className={styles.header}>
           <div className={styles.item}>
-              <a className={styles.itemAnchor}>
-                  List View
-              </a>
+              <BrowserRouter>
+                  <Link to={"/list"} className={styles.itemAnchor}>
+                      List View
+                  </Link>
+              </BrowserRouter>
+
           </div>
             <div className={styles.divider}/>
 
@@ -27,6 +36,8 @@ const Header = () => {
                   Add
               </a>
           </div>
+
+
 
 
           <AddModal show={show} handleClose={() => handleClose()}/>

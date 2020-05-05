@@ -7,12 +7,14 @@ export default class HumanIdeogram extends Component {
 
     createIdeogram() {
         const config = Object.assign({
-            chrWidth: 15,
+            chrWidth: 17,
             chrMargin: 10,
+            chrHeight: 600,
             organism: 'human',
             annotations: file,
             dataDir: 'https://unpkg.com/ideogram@1.16.0/dist/data/bands/native/',
             container: '#ideo-container',
+            annotationsLayout: 'overlay'
         }, this.props);
         new Ideogram(config);
     }
