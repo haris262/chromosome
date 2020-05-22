@@ -29,7 +29,10 @@ export default class HumanIdeogram extends Component {
 
     render() {
         return (
-            <div id="ideo-container" className={style.ideogram}></div>
+            <div className={style.ideogram}>
+                <div id="ideo-container" className={style.ideo} ></div>
+            </div>
+
         );
     }
 }

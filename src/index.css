@@ -3,3 +3,17 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.link{
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.inactive{
+  display: none;
+}

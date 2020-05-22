@@ -5,6 +5,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import AddModal from "../CURD Modals/AddModal";
 import DeleteModal from "../CURD Modals/DeleteModal";
 import EditModal from "../CURD Modals/EditModal";
+import {withRouter} from "react-router";
 
 
 
@@ -106,7 +107,7 @@ const ListView = (props) => {
     )
 };
 
-export default ListView;
+export default withRouter(ListView);
 
 
 

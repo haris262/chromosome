@@ -4,11 +4,17 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Select from 'react-select';
 import cx from 'classnames';
+import {SketchPicker} from "react-color";
 
 const EditModal = (props) =>{
 
     const [selectedChr, setSelectedChr] = useState();
-    const [selectedColor, setSelectedColor] = useState();
+    const [selectedColor, setSelectedColor] = useState({ background: '#fff' });
+
+    const handleChangeComplete = (color) => {
+        console.log(color)
+        setSelectedColor({ background: color.hex });
+    };
     return(
         <Modal show={props.show} onHide={props.handleClose} size="md" >
             <Modal.Header closeButton>
@@ -39,12 +45,9 @@ const EditModal = (props) =>{
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>Color:</div>
-                        <Select
-                            className={style.select}
-                            value={selectedColor}
-                            onChange={value => setSelectedColor(value)}
-                            options={colorOptions}
-                        />
+                        <SketchPicker
+                            color={ selectedColor.background }
+                            onChangeComplete={(color) => handleChangeComplete(color) }/>
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>Link:</div>

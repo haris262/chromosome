@@ -1,6 +1,4 @@
-.ideogram {
-    margin-left: 60px;
-    margin-top: 20px;
-    overflow-x: hidden !important;
-    overflow: hidden !important;
+.ideogram{
+    width: 80%;
+    margin-top: 50px;
 }
