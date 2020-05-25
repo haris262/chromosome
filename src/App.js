@@ -21,7 +21,7 @@ const App = () => {
           <BrowserRouter >
               <Header/>
               <div>
-                  <Route path="/list"  component={() => <ListView data={file}/>}  />
+                  <Route path="/list"  component={() => <ListView tmpData={file}/>}  />
                   <Route exact path="/" exact component={() => <Chromosome/>}  />
               </div>
           </BrowserRouter>

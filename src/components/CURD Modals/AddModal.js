@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import axios from 'axios';
 import style from "./style.module.css"
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -8,8 +9,17 @@ import { SketchPicker } from 'react-color';
 
 const AddModal = (props) =>{
 
+
+    const addAnnot = () =>{
+        const data = {name, chr:selectedChr, start, stop};
+        axios.post('http://localhost:8080/add', data);
+    }
+
     const [selectedChr, setSelectedChr] = useState();
     const [selectedColor, setSelectedColor] = useState({ background: '#fff' });
+    const [name, setName] = useState();
+    const [start, setStart] = useState();
+    const [stop, setStop] = useState();
 
     const handleChangeComplete = (color) => {
         console.log(color)
@@ -35,15 +45,16 @@ const AddModal = (props) =>{
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>Name:</div>
-                        <input className={style.input} type="text" name="name" />
+                        <input className={style.input} type="text" name="name" onChange={(e) => {setName(e.target.value)}} />
                     </label>
                     <label className={style.row}>
-                        <div className={style.label}>Start:</div>
-                        <input className={style.input} type="text" name="name" />
+                        <div className={style.label}>Beginning:</div>
+                        <input className={style.input} type="text" name="name" onChange={(e) => {setStart(e.target.value)}} />
                     </label>
                     <label className={style.row}>
-                        <div className={style.label}>Length:</div>
-                        <input className={style.input} type="text" name="name" />
+                        <div className={style.label}>End:</div>
+                        <input className={style.input} type="text" name="name" onChange={(e) => {setStop(e.target.value);
+                        console.log(name, start, stop)}}/>
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>Color:</div>
@@ -62,7 +73,7 @@ const AddModal = (props) =>{
                 <Button variant="secondary" onClick={props.handleClose}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={props.handleClose}>
+                <Button variant="primary" onClick={() =>{addAnnot(); props.handleClose()}}>
                     Add
                 </Button>
             </Modal.Footer>

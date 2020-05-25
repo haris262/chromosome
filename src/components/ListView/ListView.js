@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import axios from 'axios';
 import style from "./ListView.module.css"
 import Table from "react-bootstrap/Table";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -11,6 +12,7 @@ import {withRouter} from "react-router";
 
 
 const ListHeader = (headers) =>{
+    console.log(headers)
     return(
         <thead >
         <tr>
@@ -28,21 +30,22 @@ const ListHeader = (headers) =>{
     )
 }
 
-const ListBody = ({data, handleShowDelete, handleShowEdit}) =>{
+const ListBody = ({data, handleEdit, handleDelete}) =>{
+
+    console.log(data)
+
     return (
         <tbody>
-        {data.map((chr) =>{
+        {data.map((annot, index) =>{
             return(
-                    chr.annots.map((annot, index) =>{
-                        return(
-                            <tr key={index}>
-                                {annot.map((item, index) =>{
-                                return(
-                                    <td key={`${index}-${item}`}>{item}</td>
 
-                                )
-                            }
-                            )}
+                <tr key={index}>
+
+                    <td >{annot.name}</td>
+                    <td >{annot.chr}</td>
+                    <td >{annot.start}</td>
+                    <td >{annot.stop}</td>
+
                             <td>
                                 <Dropdown>
                                     <Dropdown.Toggle
@@ -53,17 +56,14 @@ const ListBody = ({data, handleShowDelete, handleShowEdit}) =>{
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1" onClick={() => handleShowEdit()}>Edit</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2" onClick={() => handleShowDelete()}>Delete</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1" onClick={() => handleEdit(annot)}>Edit</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2" onClick={() => handleDelete(annot)}>Delete</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </td>
                             </tr>
                         )
                     }
-                    )
-
-
             )
         })}
 
@@ -75,18 +75,37 @@ const ListBody = ({data, handleShowDelete, handleShowEdit}) =>{
 
 
 const ListView = (props) => {
+    const loadData  =  async () =>{
+        let response = await axios.get('http://localhost:8080/genes').then(async (response) => {await setData(response.data); console.log(response)});
+    }
+
+    const headers = ['Name', 'Chromosome', 'Beginning', 'End'];
+
+    const [selectedRow, setSelectedRow] = useState();
 
     const [showDelete, setShowDelete] = useState(false);
     const handleCloseDelete = (dialog) => setShowDelete(false);
-    const handleShowDelete = (dialog) => setShowDelete(true);
 
     const [showEdit, setShowEdit] = useState(false);
     const handleCloseEdit = (dialog) => setShowEdit(false);
-    const handleShowEdit = (dialog) => setShowEdit(true);
+
+    const handleEdit = async(annot) =>{
+        setShowEdit(true);
+        await setSelectedRow(annot);
+    }
+
+    const handleDelete = (annot) =>{
+        setShowEdit(true);
+        setSelectedRow(annot);
+    }
+
+    useEffect(() => {
+        loadData();
+    })
 
 
+    const [data, setData] = useState([]);
 
-    const {data} = props;
 
     return (
         <div className={style.list}>
@@ -95,17 +114,18 @@ const ListView = (props) => {
                 hover={true}
                 striped={true}
             >
-                <ListHeader headers={getSafeDeep(data, "keys")}/>
-
-                <ListBody data={data.annots} handleShowDelete={() => handleShowDelete()} handleShowEdit={() => handleShowEdit()}/>
+                <ListHeader headers={headers}/>
+                <ListBody data={data} handleDelete={(annot) => handleDelete(annot)} handleEdit={(annot) => handleEdit(annot)} setSelectedRow={(row) => setSelectedRow(row)}/>
 
             </Table>
-            <DeleteModal show={showDelete} handleClose={() => handleCloseDelete()}/>
-            <EditModal show={showEdit} handleClose={() => handleCloseEdit()}/>
+            <DeleteModal show={showDelete} handleClose={() => handleCloseDelete()} selectedRow={selectedRow}/>
+            <EditModal show={showEdit} handleClose={() => handleCloseEdit() } selectedRow={selectedRow}/>
         </div>
 
     )
 };
+
+
 
 export default withRouter(ListView);
 

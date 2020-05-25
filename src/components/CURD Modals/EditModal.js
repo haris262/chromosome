@@ -1,18 +1,36 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import axios from 'axios';
 import style from "./style.module.css"
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Select from 'react-select';
 import cx from 'classnames';
 import {SketchPicker} from "react-color";
+import {getSafeDeep} from "../ListView/ListView";
 
 const EditModal = (props) =>{
 
+    const editAnnot = () =>{
+        const data = {name, chr:selectedChr, start, stop};
+        axios.post('http://localhost:8080/edit', data);
+    }
     const [selectedChr, setSelectedChr] = useState();
     const [selectedColor, setSelectedColor] = useState({ background: '#fff' });
+    const [name, setName] = useState();
+    const [start, setStart] = useState();
+    const [stop, setStop] = useState();
+
+    useEffect(() => {
+       setName(getSafeDeep(props.selectedRow,'name'));
+       setStart(getSafeDeep(props.selectedRow,'start'));
+       setStop(getSafeDeep(props.selectedRow,'stop'));
+       setSelectedChr({label:getSafeDeep(props.selectedRow, 'chr').toString(), value:getSafeDeep(props.selectedRow, 'chr').toString()});
+    }, [props.selectedRow]);
+
 
     const handleChangeComplete = (color) => {
         console.log(color)
+        console.log(getSafeDeep(props.selectedRow,'0'))
         setSelectedColor({ background: color.hex });
     };
     return(
@@ -33,15 +51,15 @@ const EditModal = (props) =>{
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>Name:</div>
-                        <input className={style.input} type="text" name="name" />
+                        <input readOnly className={style.input} type="text" name="name" value={name} onChange={(e) => {setName(e.target.value)}} />
                     </label>
                     <label className={style.row}>
-                        <div className={style.label}>Start:</div>
-                        <input className={style.input} type="text" name="name" />
+                        <div className={style.label}>Beginning:</div>
+                        <input className={style.input} type="text" name="name" value={start} onChange={(e) => {setStart(e.target.value)}} />
                     </label>
                     <label className={style.row}>
-                        <div className={style.label}>Length:</div>
-                        <input className={style.input} type="text" name="name" />
+                        <div className={style.label}>End:</div>
+                        <input className={style.input} type="text" name="name" value={stop} onChange={(e) => setStop(e.target.value)}/>
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>Color:</div>

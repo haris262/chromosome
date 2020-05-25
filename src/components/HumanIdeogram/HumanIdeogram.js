@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import file from "../../data/annotations/100_virtual_snvs"
 import Ideogram from 'ideogram';
 import style from "./HumanIdeogram.module.css"
 
@@ -11,12 +10,14 @@ export default class HumanIdeogram extends Component {
             chrMargin: 10,
             chrHeight: 600,
             organism: 'human',
-            annotations: file,
+            annotations: this.props.data,
             dataDir: 'https://unpkg.com/ideogram@1.16.0/dist/data/bands/native/',
             container: '#ideo-container',
             annotationsLayout: 'overlay'
         }, this.props);
         new Ideogram(config);
+
+        console.log(this.props.data)
     }
 
     componentDidUpdate() {

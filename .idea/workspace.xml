@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a12cedd0-2f4f-4b2b-80e5-65cab8e58c67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Chromosome/Chromosome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chromosome/Chromosome.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CURD Modals/AddModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CURD Modals/AddModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CURD Modals/EditModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CURD Modals/EditModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chromosome/Chromosome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chromosome/Chromosome.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HumanIdeogram/HumanIdeogram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HumanIdeogram/HumanIdeogram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HumanIdeogram/HumanIdeogram.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HumanIdeogram/HumanIdeogram.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ListView/ListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListView/ListView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <list id="42744a80-5105-4967-bd2b-7f55cf653a9b" name="Apply: " comment="" />
@@ -109,6 +105,9 @@
       <workItem from="1588672574474" duration="3496000" />
       <workItem from="1588676117138" duration="75000" />
       <workItem from="1588684527844" duration="862000" />
+      <workItem from="1590161471786" duration="76000" />
+      <workItem from="1590405997349" duration="239000" />
+      <workItem from="1590406255711" duration="8854000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1587122827389</created>
@@ -131,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588676177826</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Routing fixed; Added color picker to modals; Centered chromosome view;">
+      <created>1590161531406</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590161531406</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,13 +161,18 @@
     <MESSAGE value="added ideogram component" />
     <MESSAGE value="modal partial" />
     <MESSAGE value="Routing for manual input done, Delete Modal Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Routing for manual input done, Delete Modal Added" />
+    <MESSAGE value="Routing fixed; Added color picker to modals; Centered chromosome view;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Routing fixed; Added color picker to modals; Centered chromosome view;" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="108" key="CommitChangelistDialog2" timestamp="1590144608331">
+    <state x="585" y="108" key="CommitChangelistDialog2" timestamp="1590161530832">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="585" y="108" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590144608331" />
+    <state x="585" y="108" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590161530832" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1590406225576">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="295" key="FileChooserDialogImpl/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590406225576" />
     <state x="184" y="90" key="MergeDialog" timestamp="1590144574080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
