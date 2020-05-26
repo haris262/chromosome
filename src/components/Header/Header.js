@@ -10,7 +10,7 @@ import cx from 'classnames';
 
 
 
-const Header = () => {
+const Header = (props) => {
 
     const browserHistory = createBrowserHistory();
 
@@ -58,7 +58,7 @@ const Header = () => {
 
 
 
-          <AddModal show={show} handleClose={() => handleClose()}/>
+          <AddModal show={show} handleClose={() => handleClose()} reloadData={props.reloadData}/>
 
       </div>
     );

@@ -65,7 +65,7 @@ const ListBody = ({data, handleEdit, handleDelete}) =>{
                         )
                     }
             )
-        })}
+        }
 
 
         </tbody>
@@ -74,14 +74,23 @@ const ListBody = ({data, handleEdit, handleDelete}) =>{
 }
 
 
+
 const ListView = (props) => {
-    const loadData  =  async () =>{
-        let response = await axios.get('http://localhost:8080/genes').then(async (response) => {await setData(response.data); console.log(response)});
-    }
+
+
+
+
+    const [data, setData] = useState(props.data);
+
+
+
 
     const headers = ['Name', 'Chromosome', 'Beginning', 'End'];
 
     const [selectedRow, setSelectedRow] = useState();
+
+    const [showAdd, setShowAdd] = useState(false);
+    const handleCloseAdd = (dialog) => setShowAdd(false);
 
     const [showDelete, setShowDelete] = useState(false);
     const handleCloseDelete = (dialog) => setShowDelete(false);
@@ -95,16 +104,16 @@ const ListView = (props) => {
     }
 
     const handleDelete = (annot) =>{
-        setShowEdit(true);
+        setShowDelete(true);
         setSelectedRow(annot);
     }
 
-    useEffect(() => {
-        loadData();
-    })
 
 
-    const [data, setData] = useState([]);
+
+
+
+
 
 
     return (
@@ -118,8 +127,8 @@ const ListView = (props) => {
                 <ListBody data={data} handleDelete={(annot) => handleDelete(annot)} handleEdit={(annot) => handleEdit(annot)} setSelectedRow={(row) => setSelectedRow(row)}/>
 
             </Table>
-            <DeleteModal show={showDelete} handleClose={() => handleCloseDelete()} selectedRow={selectedRow}/>
-            <EditModal show={showEdit} handleClose={() => handleCloseEdit() } selectedRow={selectedRow}/>
+            <DeleteModal show={showDelete} handleClose={() => handleCloseDelete()} selectedRow={selectedRow} reloadData={props.reloadData}/>
+            <EditModal show={showEdit} handleClose={() => handleCloseEdit() } selectedRow={selectedRow} reloadData={props.reloadData}/>
         </div>
 
     )

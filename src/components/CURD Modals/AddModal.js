@@ -11,15 +11,16 @@ const AddModal = (props) =>{
 
 
     const addAnnot = () =>{
-        const data = {name, chr:selectedChr, start, stop};
-        axios.post('http://localhost:8080/add', data);
+        const data = {name, chr:selectedChr.label, start, stop, color:selectedColor.background};
+        axios.post('http://localhost:8080/genes/add', data).then(() => props.reloadData());
+
     }
 
-    const [selectedChr, setSelectedChr] = useState();
-    const [selectedColor, setSelectedColor] = useState({ background: '#fff' });
-    const [name, setName] = useState();
-    const [start, setStart] = useState();
-    const [stop, setStop] = useState();
+    const [selectedChr, setSelectedChr] = useState("");
+    const [selectedColor, setSelectedColor] = useState({ background: '#b81414' });
+    const [name, setName] = useState("");
+    const [start, setStart] = useState("");
+    const [stop, setStop] = useState("");
 
     const handleChangeComplete = (color) => {
         console.log(color)

@@ -10,21 +10,24 @@ import {getSafeDeep} from "../ListView/ListView";
 
 const EditModal = (props) =>{
 
-    const editAnnot = () =>{
-        const data = {name, chr:selectedChr, start, stop};
-        axios.post('http://localhost:8080/edit', data);
+    const editAnnot = async () =>{
+        const data = {id, name, chr:selectedChr.label, start, stop, color:selectedColor.background};
+        await axios.put('http://localhost:8080/genes/edit', data);
+        props.reloadData();
     }
     const [selectedChr, setSelectedChr] = useState();
     const [selectedColor, setSelectedColor] = useState({ background: '#fff' });
     const [name, setName] = useState();
     const [start, setStart] = useState();
     const [stop, setStop] = useState();
+    const [id, setId] = useState();
 
     useEffect(() => {
        setName(getSafeDeep(props.selectedRow,'name'));
        setStart(getSafeDeep(props.selectedRow,'start'));
        setStop(getSafeDeep(props.selectedRow,'stop'));
        setSelectedChr({label:getSafeDeep(props.selectedRow, 'chr').toString(), value:getSafeDeep(props.selectedRow, 'chr').toString()});
+       setId(getSafeDeep(props.selectedRow,'id'));
     }, [props.selectedRow]);
 
 
@@ -78,7 +81,7 @@ const EditModal = (props) =>{
                 <Button variant="secondary" onClick={props.handleClose}>
                     Close
                 </Button>
-                <Button variant="outline-success" onClick={props.handleClose}>
+                <Button variant="outline-success" onClick={() => { editAnnot();props.handleClose()}}>
                     Save
                 </Button>
             </Modal.Footer>
