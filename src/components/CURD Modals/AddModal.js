@@ -6,12 +6,15 @@ import Button from "react-bootstrap/Button";
 import Select from 'react-select';
 import cx from 'classnames';
 import { SketchPicker } from 'react-color';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 
 const AddModal = (props) =>{
 
 
     const addAnnot = () =>{
-        const data = {name, chr:selectedChr.label, start, stop, color:selectedColor.background};
+        const data = {name, chr:selectedChr.label, start, stop, color:selectedColor.background, comment};
         axios.post('http://localhost:8080/genes/add', data).then(() => props.reloadData());
 
     }
@@ -21,9 +24,9 @@ const AddModal = (props) =>{
     const [name, setName] = useState("");
     const [start, setStart] = useState("");
     const [stop, setStop] = useState("");
+    const [comment, setComment] = useState("");
 
     const handleChangeComplete = (color) => {
-        console.log(color)
         setSelectedColor({ background: color.hex });
     };
 
@@ -54,8 +57,7 @@ const AddModal = (props) =>{
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>End:</div>
-                        <input className={style.input} type="text" name="name" onChange={(e) => {setStop(e.target.value);
-                        console.log(name, start, stop)}}/>
+                        <input className={style.input} type="text" name="name" onChange={(e) => {setStop(e.target.value);}}/>
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>Color:</div>
@@ -67,14 +69,18 @@ const AddModal = (props) =>{
                         <div className={style.label}>Link:</div>
                         <input className={style.input} type="text" name="name" />
                     </label>
+                    <label className={style.row}>
+                        <div className={style.label}>Comment:</div>
+                        <textarea className={style.input}  name="name" onChange={(e) => {setComment(e.target.value)}}/>
+                    </label>
                 </form>
             </Modal.Body>
 
             <Modal.Footer>
-                <Button variant="secondary" onClick={props.handleClose}>
+                <Button variant="primary" onClick={props.handleClose}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={() =>{addAnnot(); props.handleClose()}}>
+                <Button variant="default" onClick={() =>{addAnnot(); props.handleClose()}}>
                     Add
                 </Button>
             </Modal.Footer>

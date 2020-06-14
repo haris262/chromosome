@@ -5,6 +5,9 @@ import {Link, BrowserRouter, NavLink} from "react-router-dom";
 import {Router} from "react-router-dom";
 import {createBrowserHistory} from "history";
 import cx from 'classnames';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 
 
 
@@ -14,10 +17,8 @@ const Header = (props) => {
 
     const browserHistory = createBrowserHistory();
 
-    console.log(browserHistory)
 
     const getLocation = () =>{
-        console.log(browserHistory.location)
         if(browserHistory.location.pathname === "/list")
             return true
         else

@@ -7,11 +7,14 @@ import Select from 'react-select';
 import cx from 'classnames';
 import {SketchPicker} from "react-color";
 import {getSafeDeep} from "../ListView/ListView";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 
 const EditModal = (props) =>{
 
     const editAnnot = async () =>{
-        const data = {id, name, chr:selectedChr.label, start, stop, color:selectedColor.background};
+        const data = {id, name, chr:selectedChr.label, start, stop, color:selectedColor.background, comment};
         await axios.put('http://localhost:8080/genes/edit', data);
         props.reloadData();
     }
@@ -21,6 +24,7 @@ const EditModal = (props) =>{
     const [start, setStart] = useState();
     const [stop, setStop] = useState();
     const [id, setId] = useState();
+    const [comment, setComment] = useState();
 
     useEffect(() => {
        setName(getSafeDeep(props.selectedRow,'name'));
@@ -28,12 +32,11 @@ const EditModal = (props) =>{
        setStop(getSafeDeep(props.selectedRow,'stop'));
        setSelectedChr({label:getSafeDeep(props.selectedRow, 'chr').toString(), value:getSafeDeep(props.selectedRow, 'chr').toString()});
        setId(getSafeDeep(props.selectedRow,'id'));
+       setComment(getSafeDeep(props.selectedRow, 'comment'));
     }, [props.selectedRow]);
 
 
     const handleChangeComplete = (color) => {
-        console.log(color)
-        console.log(getSafeDeep(props.selectedRow,'0'))
         setSelectedColor({ background: color.hex });
     };
     return(
@@ -72,13 +75,17 @@ const EditModal = (props) =>{
                     </label>
                     <label className={style.row}>
                         <div className={style.label}>Link:</div>
-                        <input className={style.input} type="text" name="name" />
+                        <input className={style.input} type="text" name="name"  />
+                    </label>
+                    <label className={style.row}>
+                        <div className={style.label}>Comment:</div>
+                        <textarea className={style.input}  name="name" value={comment} onChange={(e) => {setComment(e.target.value)}}/>
                     </label>
                 </form>
             </Modal.Body>
 
             <Modal.Footer>
-                <Button variant="secondary" onClick={props.handleClose}>
+                <Button variant="primary" onClick={props.handleClose}>
                     Close
                 </Button>
                 <Button variant="outline-success" onClick={() => { editAnnot();props.handleClose()}}>
